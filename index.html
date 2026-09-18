@@ -132,6 +132,26 @@
   .prompt{
     margin-top: 40px;
     color: var(--ink-faint);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .prompt .cursor-block{
+    display: inline-block;
+    width: 0.55em;
+    height: 1.1em;
+    background: var(--accent);
+    animation: blink 1s steps(1) infinite;
+  }
+
+  @keyframes blink{
+    0%, 49%{ opacity: 1; }
+    50%, 100%{ opacity: 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .prompt .cursor-block{ animation: none; }
   }
 
   @media (max-width: 420px){
@@ -153,7 +173,7 @@
 
   <main>
 
-    <p class="section-head"><span class="sym">-</span> about <span class="sym">+</span></p>
+    <p class="section-head"><span class="sym">-</span> about</p>
     <div class="about">
       <p>Deep listening for altered states.</p>
       <p>cloudz is a mix series built around long, uninterrupted listening. Ambient, techno, IDM, and bass music selected for stillness, focus, and states of mind that ordinary listening doesn't reach.</p>
@@ -161,7 +181,7 @@
       <p>Musicians are invited to submit mixes in this spirit. Send your most inward work and let it reach the people who need it.</p>
     </div>
 
-    <p class="section-head"><span class="sym">-</span> manifesto <span class="sym">+</span></p>
+    <p class="section-head"><span class="sym">-</span> manifesto</p>
     <div class="manifesto">
       <p>I didn't set out to start this series, but somewhere along the line I ended up here. Two years ago I was experimenting a lot with music and altered states at home alone. I learned a lot from that and this series is me wanting to share what I learned.</p>
 
@@ -180,7 +200,7 @@
       <p>This is for that person. cloudz is a place for music that was actually chosen. Not for the dancefloor, not for background focus but curated for going inward.</p>
     </div>
 
-    <p class="section-head"><span class="sym">-</span> genres <span class="sym">+</span></p>
+    <p class="section-head"><span class="sym">-</span> genres</p>
     <ul class="bracket-list">
       <li>ambient</li>
       <li>experimental</li>
@@ -190,7 +210,7 @@
       <li>sound research</li>
     </ul>
 
-    <p class="section-head"><span class="sym">-</span> submit <span class="sym">+</span></p>
+    <p class="section-head"><span class="sym">-</span> submit</p>
     <p class="comment"><span class="slashes">//</span> a small archive, built with a few artists at a time</p>
     <dl class="spec">
       <dt>length</dt><dd>60&ndash;90 min</dd>
@@ -206,7 +226,7 @@
       <a href="mailto:vornametania@pm.me">[email]</a>
       <a href="https://vornametania.github.io">[zer&oslash;]</a>
     </div>
-    <p class="prompt">&gt;</p>
+    <p class="prompt">&gt; <span class="cursor-block"></span></p>
   </footer>
 
 </div>
